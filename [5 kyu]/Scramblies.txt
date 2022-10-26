@@ -1,0 +1,50 @@
+//  https://www.codewars.com/kata/55c04b4cc56a697bb0000048
+
+
+import java.util.HashMap;
+
+public class Scramblies {
+    
+    public static boolean scramble(String str1, String str2) {
+    
+    HashMap<Character, Integer> string1 = new HashMap<>();
+     HashMap<Character, Integer> string2 = new HashMap<>();
+     
+     for ( int i = 0 ; i< str1.length() ; i++) {
+       
+       if ( string1.containsKey(str1.charAt(i))) {
+         int tmp = string1.get(str1.charAt(i)); 
+         tmp++ ;
+         string1.replace(str1.charAt(i), tmp);
+         
+       }else {
+         string1.put(str1.charAt(i), 1);
+        
+       }
+       
+     }
+     
+     for ( int i = 0 ; i< str2.length() ; i++) {
+       
+       if ( string2.containsKey(str2.charAt(i))) {
+         int tmp = string2.get(str2.charAt(i));
+         tmp++;
+         string2.replace(str2.charAt(i), tmp);
+       }else {
+         string2.put(str2.charAt(i), 1);
+       }
+       
+     }
+
+     for (HashMap.Entry<Character, Integer> entry : string2.entrySet()) {
+              try {
+                  if (entry.getValue() > string1.get(entry.getKey())) {
+                      return false;
+                  }
+              } catch (NullPointerException e) {
+                  return false;
+              }
+          }
+    return true ; 
+    }
+}

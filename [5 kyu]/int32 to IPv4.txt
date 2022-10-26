@@ -1,0 +1,29 @@
+//  https://www.codewars.com/kata/52e88b39ffb6ac53a400022e
+
+
+public class Kata {
+  public static String longToIP(long ip) {
+String result="";
+      //convert to binary (as a string ) 
+      while (ip != 0) { 
+        result = ip%2 + result ;
+        ip = ip/2 ;
+      }
+      // reformat it to 32 binary 
+      result = String.format("%32s", result).replaceAll(" ", "0");
+      // slice it down 
+      String part1 =  result.substring(0,8);
+      String part2 =  result.substring(8,16);
+      String part3 =  result.substring(16, 24);
+      String part4 =  result.substring(24, 32);
+      // convert every slice ro a dicimal number 
+      int a = Integer.parseInt(part1,2);
+      int b = Integer.parseInt(part2,2);
+      int c = Integer.parseInt(part3,2);
+      int d = Integer.parseInt(part4,2);
+      // voila !!
+      result = String.format("%d.%d.%d.%d", a,b,c,d) ;
+
+      return result ;
+  }
+}

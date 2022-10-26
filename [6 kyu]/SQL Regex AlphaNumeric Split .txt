@@ -1,0 +1,22 @@
+//  https://www.codewars.com/kata/594257d4db68b6e99200002c
+
+/*  SQL  */
+/* The Oracle/PLSQL REGEXP_REPLACE function is an extension of the function REPLACE.
+This function, introduced in Oracle 10g, allows you to replace a sequence of characters 
+in a string with a different set of characters using regular expression pattern mapping.
+
+[ ] It is used to specify a list of matches 
+where you try to match any of the characters in the list.
+
+[^ ]  It is used to specify a nonmatching list where you try to match 
+any character except for those on the list.
+
+\d  Corresponds to the digital symbol.
+
+https://www.sqlsplus.com/oracle-regexp_replace-function/
+*/
+SELECT project , regexp_replace (address ,'[\d]','','g') as letters,
+REGEXP_REPLACE (address ,'[^\d]','','g') as numbers 
+FROM repositories ;
+
+

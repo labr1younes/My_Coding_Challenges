@@ -1,0 +1,17 @@
+//  https://www.codewars.com/kata/581113dce10b531b1d0000bd
+
+
+# optimize
+def find_x(n):
+    resultj = 0 
+    resulti = 0
+    n_2 = n*2 
+    
+    resultj = int ((n_2*(n_2-1))/2) 
+    totalj = resultj * n
+    
+    resulti = int ((n*(n-1))/2)
+    totali = resulti * n_2
+
+     
+    return totalj + totali

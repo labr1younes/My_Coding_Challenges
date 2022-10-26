@@ -1,0 +1,16 @@
+//   https://www.codewars.com/kata/54c27a33fb7da0db0100040e
+
+
+
+public class Square {    
+    public static boolean isSquare(int n) {        
+        int num = n ;
+    Math.sqrt(num);
+    
+    if (Math.sqrt(num) == (int)Math.sqrt(num))
+    {
+      return true; // fix me!
+    }
+    else return false;
+    }
+}

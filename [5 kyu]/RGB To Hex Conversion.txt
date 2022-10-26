@@ -1,0 +1,20 @@
+// https://www.codewars.com/kata/513e08acc600c94f01000001
+
+def rgb(r, g, b):
+    if (r>255):
+        r=255
+    elif(r<0):
+        r=0
+    
+    if (g>255):
+        g=255
+    elif(g<0):
+        g=0
+    
+    if (b>255):
+        b=255
+    elif(b<0):
+        b=0
+    result = "{:02X}".format(r) + "{:02X}".format(g) +"{:02X}".format(b)
+    return result
+    pass

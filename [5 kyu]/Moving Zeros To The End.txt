@@ -1,0 +1,9 @@
+//  https://www.codewars.com/kata/52597aa56021e91c93000cb0
+
+def move_zeros(lst):
+    tmp = lst 
+    for n in lst :
+        if (n==0) :
+            del(tmp[lst.index(n)])
+            tmp.append(0)
+    return tmp 

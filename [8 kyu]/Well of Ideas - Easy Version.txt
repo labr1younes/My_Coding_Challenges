@@ -1,0 +1,26 @@
+//   https://www.codewars.com/kata/57f222ce69e09c3630000212
+
+
+public class Kata {
+
+  public static String well(String[] x) {
+   int good = 0;
+    int bad = 0;
+    String result = "";
+    for (int i = 0 ; i<x.length ;i++) {
+      if (x[i]=="good") {
+        good+=1;
+      }else {
+        bad+=1;
+      }
+      
+    }
+    if (good==0) {  result = "Fail!" ;} 
+    else { 
+      if ( good<=2 ) { result = "Publish!" ;} 
+      else {result = "I smell a series!" ;} 
+      
+    }
+    return result;
+
+}}

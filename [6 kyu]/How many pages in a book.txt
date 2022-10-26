@@ -1,0 +1,24 @@
+//  https://www.codewars.com/kata/622de76d28bf330057cd6af8
+
+
+public class HowManyPagesInABook {
+  
+  public static int amountOfPages(int number) {
+  
+    int  x = 0;
+    int l = 0 ;
+    
+    for ( int i = 0 ;i <= number ; i++) {
+      
+      l = l +String.valueOf(i).length();
+      if (l>number) {
+        x = i ;
+        break ; 
+      }
+    }
+  
+    return x;
+    
+  }
+
+}
