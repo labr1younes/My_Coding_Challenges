@@ -1,0 +1,8 @@
+//  https://www.codewars.com/kata/58094559c47d323ebd000035
+
+SELECT people.id,people.name ,COUNT(sale) as sale_count,--first 3 columns
+RANK() OVER (ORDER BY COUNT(sale) DESC 
+) as sale_rank -- the last column we add rank on it 
+FROM people 
+JOIN sales ON sales.people_id =people.id -- we did the join 
+GROUP BY people.id;
