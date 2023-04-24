@@ -1,0 +1,8 @@
+//  https://www.codewars.com/kata/5583090cbe83f4fd8c000051/python
+
+def digitize(n):
+    tmp=[]
+    s=str(n)
+    for i in s:
+        tmp.append(int(i))
+    return tmp[::-1]
