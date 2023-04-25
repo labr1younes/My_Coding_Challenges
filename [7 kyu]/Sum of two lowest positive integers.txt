@@ -1,0 +1,8 @@
+//  https://www.codewars.com/kata/558fc85d8fd1938afb000014/python
+
+
+def sum_two_smallest_numbers(numbers):
+    mn1 = min(numbers)
+    numbers.remove(mn1)
+    mn2 = min(numbers)
+    return mn1 + mn2 
