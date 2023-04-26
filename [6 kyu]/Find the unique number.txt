@@ -1,0 +1,11 @@
+//  https://www.codewars.com/kata/585d7d5adb20cf33cb000235/python
+
+# we make our list to a set , we will have only TWO elements 
+# then we will check for thet unique one
+def find_uniq(array):
+    st = set(array)
+    if array[0]==array[1] and array[0]==list(st)[0]:
+        tmp = list(st)[1]
+    else:
+        tmp = list(st)[0]
+    return tmp
