@@ -1,0 +1,14 @@
+//  https://www.codewars.com/kata/526989a41034285187000de4/python
+
+def ips_between(start, end):
+    ips = start.split(".")
+    ipe = end.split(".")
+
+    one = int(ipe[0]) - int(ips[0])
+    two = int(ipe[1]) - int(ips[1])
+    three = int(ipe[2]) - int(ips[2])
+    four = int(ipe[3]) - int(ips[3])
+    
+    result = (one*(256**3)) + (two*(256**2)) + (three*(256**1)) + (four*(256**0))
+
+    return result
