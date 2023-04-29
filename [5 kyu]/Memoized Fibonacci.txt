@@ -1,0 +1,14 @@
+//  https://www.codewars.com/kata/529adbf7533b761c560004e5/python
+
+cashef = {}
+## using Memoization 
+def fibonacci(n)
+    if n in cashef 
+        return cashef[n]
+    ##
+    if n in [0, 1]
+        return n
+    result =  fibonacci(n - 1) + fibonacci(n - 2)
+    ##
+    cashef[n] = result 
+    return result 
