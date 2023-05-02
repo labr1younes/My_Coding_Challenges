@@ -1,0 +1,17 @@
+//  https://www.codewars.com/kata/52449b062fb80683ec000024/solutions
+
+
+def generate_hashtag(s):
+    if len(s.strip())==0 :
+        return False
+    else:
+        lst = s.split()
+        result="#"
+        for i in lst :
+            tmp = i.capitalize()
+            result += tmp
+        
+        if len(result)> 140 :
+            return False
+        
+        return result
