@@ -1,0 +1,9 @@
+//  https://www.codewars.com/kata/58e16de3a312d34d000000bd
+
+def rankings(arr):
+    sorted_arr = sorted(arr, reverse=True)
+    rankslist = []
+    for num in arr:
+        rank = sorted_arr.index(num) + 1
+        rankslist.append(rank)
+    return rankslist
