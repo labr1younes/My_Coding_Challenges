@@ -1,0 +1,17 @@
+// https://www.codewars.com/kata/5547cc7dcad755e480000004
+
+
+def remov_nb(number):
+    array = list(range(1,number+1))
+    s = (number*(number+1))/2
+    result = []
+    for i in array :
+        for j in array:
+            tmp = i*j
+            res = s - i -j
+            
+            if tmp == res:
+                x =(i,j)
+                result.append(x)
+    
+    return result
