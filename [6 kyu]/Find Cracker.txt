@@ -1,0 +1,32 @@
+//  https://www.codewars.com/kata/59f70440bee845599c000085
+
+
+def find_hack(arr):
+    my = {
+        "A" : 30,
+        "B" : 20,
+        "C" : 10,
+        "D" : 5 ,
+    }
+    result = []
+    for i in range(len(arr)) :
+        summ = 0
+        
+        if len(arr[i][2])>=5:
+            flag = True
+            for s in arr[i][2]:
+                if s != "A" and s!="B":
+                    flag = False
+                    break
+            if flag:
+                summ += 20
+        
+        for j in arr[i][2]:
+            if my.get(j)== None:
+                continue
+            summ += my.get(j)
+        
+        if arr[i][1]> summ or arr[i][1]>200 :
+            result.append(arr[i][0])
+
+    return result

@@ -1,0 +1,16 @@
+//  https://www.codewars.com/kata/526dbd6c8c0eb53254000110
+
+# we can use string.isalnum() , but I tried to make it instead .
+import string
+
+def alphanumeric(password):
+    lst = (list(string.ascii_lowercase + string.ascii_uppercase + string.digits))
+    if password =="" :
+        return False
+    else :
+        for i in password:
+            if i in lst :
+                continue
+            else:
+                return False
+    return True
