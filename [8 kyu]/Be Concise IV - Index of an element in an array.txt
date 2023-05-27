@@ -1,0 +1,6 @@
+//  https://www.codewars.com/kata/5703c093022cd1aae90012c9
+
+def find(a,e):
+    if e in list(a):
+        return a.index(e)
+    return 'Not found'
