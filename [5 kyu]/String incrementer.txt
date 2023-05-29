@@ -1,0 +1,21 @@
+//  https://www.codewars.com/kata/54a91a4883a7de5d7800009c
+
+def increment_string(strng):
+    dig_index = None
+    # if its empty 
+    if  strng == "":
+        return "1"
+    # if its a number 
+    if strng.isnumeric():
+        mm = str(int(strng)+1).zfill(len(strng))
+        return mm
+    # the normal condition
+    if strng[-1].isdigit():
+        letter = strng.rstrip('0123456789') # this is the letters only
+        n = strng[len(letter):] # this is the digits only
+        tmp = str(int(n)+1).zfill(len(n)) 
+        num = int(n)
+        return letter+tmp
+    
+    else :
+        return strng+"1"

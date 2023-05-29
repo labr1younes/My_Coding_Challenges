@@ -1,0 +1,36 @@
+//  https://www.codewars.com/kata/5659c6d896bc135c4c00021e
+
+
+def next_smaller(n):
+    arr = list(str(n))
+    length = len(arr)
+    # in here we are looking for the last digit
+    i = length - 1
+    # we are comparing digits from right to left 
+    # if we find the digit to the right smaller we break
+    while i > 0 and arr[i - 1] <= arr[i]:
+        i -= 1
+    # if we didnt find any digits 
+    if i == 0:
+        return -1  
+    
+    j = length - 1
+    while arr[j] >= arr[i - 1]:
+        j -= 1
+
+    # swap the digits 
+    arr[i - 1], arr[j] = arr[j], arr[i - 1]
+
+    # reverse starting from index i
+    arr[i:] = reversed(arr[i:])
+
+    # reconstruct the number 
+    result = int(''.join(arr))
+    #check the conditions
+    if result < n and len(str(result)) == length:
+        return result
+    else:
+        return -1
+        
+
+
