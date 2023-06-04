@@ -1,0 +1,7 @@
+//  https://www.codewars.com/kata/592915cc1fad49252f000006
+
+
+def no_ifs_no_buts(a, b):
+    return str(a) +" is " + "smaller than " \
+    * (a < b) + "equal to " * (a == b) \
+    + "greater than " * (a > b)  + str(b)
