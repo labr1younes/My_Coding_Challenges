@@ -1,0 +1,19 @@
+//  https://www.codewars.com/kata/5426d7a2c2c7784365000783
+#backtracking approach
+
+def balanced_parens(n):
+    result = []
+    backtrack("", n, n, result)
+    return result
+
+def backtrack(curr, left, right, result):
+    
+    if left == 0 and right == 0:
+        result.append(curr)
+        return
+    
+    if left > 0:
+        backtrack(curr + "(", left - 1, right, result)
+    
+    if right > left:
+        backtrack(curr + ")", left, right - 1, result)
