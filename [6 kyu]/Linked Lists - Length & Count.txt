@@ -1,0 +1,25 @@
+//   https://www.codewars.com/kata/55beec7dd347078289000021
+
+
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+    
+def length(head):
+    c = 0
+    tmp = head
+    while tmp is not None:
+        c += 1
+        tmp = tmp.next
+    return c
+
+
+def count(head, value):
+    c = 0
+    tmp = head
+    while tmp is not None:
+        if tmp.data == value:
+            c += 1
+        tmp = tmp.next
+    return c
