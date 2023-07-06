@@ -1,0 +1,9 @@
+//   https://www.codewars.com/kata/586560a639c5ab3a260000f3
+
+
+def rotate(str_):
+    result = list()
+    for n in range(len(str_)):
+        tmp = str_[n+1:] + str_[:n+1]
+        result.append(tmp)
+    return result
