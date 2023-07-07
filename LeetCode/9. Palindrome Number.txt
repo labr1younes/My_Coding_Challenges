@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x<0){
+            return false ;
+        }
+        
+        char[] tmp = String.valueOf(x).toCharArray();
+        String s = "";    
+        for (char t : tmp){
+            s = t+s;
+        }
+        if (String.valueOf(x).equals(s) ) {
+            return true;
+        }else{
+            return false ;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        return int(math.sqrt(x))
+
+
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        count = 0
+        tmp = 1
+        while x>0:
+            #print("tmp = ",tmp,"// x = " , x-tmp)
+            if x-tmp <0:
+                return count
+            x-= tmp
+            tmp+=2
+            count+=1
+            
+        
+        return count

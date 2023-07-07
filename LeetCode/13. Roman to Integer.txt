@@ -1,0 +1,40 @@
+class Solution {
+    public int romanToInt(String romanNumeral) {
+        int result = 0;
+      for (int i = 0;i<romanNumeral.length();i++) {
+        
+        if (romanNumeral.charAt(i)=='M') { result += 1000; continue;}
+        
+        if (romanNumeral.charAt(i)=='C') {
+          if (i != romanNumeral.length()-1 ) {
+            if (romanNumeral.charAt(i+1)=='M') {result += 900;i++; continue;}
+            if (romanNumeral.charAt(i+1)=='D') {result += 400;i++; continue;}
+          }
+          result += 100; continue;
+        }
+        
+        if (romanNumeral.charAt(i)=='D') {result += 500; continue; }
+        
+        if (romanNumeral.charAt(i)=='X') {
+          if (i != romanNumeral.length()-1 ) {
+            if (romanNumeral.charAt(i+1)=='C') {result += 90;i++; continue;}
+            if (romanNumeral.charAt(i+1)=='L') {result += 40;i++; continue;}
+          }
+          result += 10; continue;
+        }
+        
+        if (romanNumeral.charAt(i)=='L') {result += 50; continue; }
+        
+        if (romanNumeral.charAt(i)=='I') {
+          if (i != romanNumeral.length()-1 ) {
+            if (romanNumeral.charAt(i+1)=='X') {result += 9;i++; continue;}
+            if (romanNumeral.charAt(i+1)=='V') {result += 4;i++; continue;}
+          }
+          result += 1; continue;
+        }
+        
+        if (romanNumeral.charAt(i)=='V') {result += 5; continue; }
+      }
+        return result;
+      }
+    }

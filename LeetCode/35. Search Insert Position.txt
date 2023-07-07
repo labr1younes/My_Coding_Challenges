@@ -1,0 +1,13 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int lef = 0;
+        int rig = nums.length -1 ;
+        while (lef <= rig){ // binary reacherch
+            int mid = lef + (rig - lef)/2;
+            if (nums[mid]==target) return mid ; 
+            if (nums[mid] > target) rig = mid-1; 
+            if (nums[mid] < target) lef = mid +1;
+        }
+        return lef ;
+    }
+}
