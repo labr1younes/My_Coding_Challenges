@@ -1,0 +1,8 @@
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        tmp = len(nums)
+        x = (tmp *(tmp+1))/2
+        y = sum(nums)
+
+        return int(x-y)
+

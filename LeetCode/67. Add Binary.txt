@@ -1,0 +1,4 @@
+class Solution:
+    def addBinary(self, x: str, y: str) -> str:
+        s = bin(int(x, 2) + int(y, 2))
+        return s[2:]
